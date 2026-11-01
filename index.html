@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MG CoDe | Social Accounts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="profile-card">
+
+        <button class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fa-solid fa-language"></i>
+            <span>English</span>
+        </button>
+
+        <div class="logo-container">
+            <img src="15.png" alt="MG CoDe Logo">
+        </div>
+
+        <div class="server-name"
+            data-ar="𝗠𝗚 𝗖𝗼𝗗𝗲"
+            data-en="𝗠𝗚 𝗖𝗼𝗗𝗲">
+            𝗠𝗚 𝗖𝗼𝗗𝗲
+        </div>
+
+        <div class="server-subtitle"
+            data-ar="مرحباً بك في عالم MG CoDe"
+            data-en="Welcome to the world of MG CoDe">
+            مرحباً بك في عالم MG CoDe
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            <span data-ar="جميع حساباتنا الرسمية"
+                data-en="Our Official Accounts">
+                جميع حساباتنا الرسمية
+            </span>
+        </div>
+
+        <div class="buttons-container">
+
+            <a href="mailto:mg7app@gmail.com" class="btn email-btn">
+                <div class="icon-box">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <span data-ar="البريد الإلكتروني"
+                    data-en="Email">البريد الإلكتروني</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://discord.gg/yUHKU2Xuhd"
+                class="btn discord-btn" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box">
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+                <span data-ar="ديسكورد" data-en="Discord">ديسكورد</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://youtube.com/@mgcode-7?si=xS2yIvUSOR8mjvZk"
+                class="btn youtube-btn" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <span data-ar="يوتيوب" data-en="YouTube">يوتيوب</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@mg7code"
+                class="btn tiktok-btn" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <span data-ar="تيك توك" data-en="TikTok">تيك توك</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://x.com/mg7code?s=11"
+                class="btn x-btn" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <span data-ar="إكس (تويتر)" data-en="X (Twitter)">إكس (تويتر)</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://www.reddit.com/user/mg7code/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                class="btn reddit-btn" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box">
+                    <i class="fa-brands fa-reddit"></i>
+                </div>
+                <span data-ar="ريديت" data-en="Reddit">ريديت</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+        </div>
+
+        <footer class="footer">
+            <div class="footer-line"></div>
+            <p>© 2026 <strong>MG CoDe</strong></p>
+            <span data-ar="جميع الحقوق محفوظة"
+                data-en="All Rights Reserved">
+                جميع الحقوق محفوظة
+            </span>
+        </footer>
+
+    </main>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.getElementById('html-root');
+            const langBtn = document.querySelector('.lang-toggle span');
+            const elements = document.querySelectorAll('[data-ar]');
+
+            if (html.getAttribute('lang') === 'ar') {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+
+                langBtn.textContent = 'العربية';
+
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-en');
+                });
+
+            } else {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+
+                langBtn.textContent = 'English';
+
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-ar');
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
