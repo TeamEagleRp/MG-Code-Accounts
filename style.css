@@ -332,6 +332,22 @@ body::before {
     color: #ff7043;
 }
 
+/* Bot Support Discord */
+
+.bot-support-btn .icon-box {
+    background: rgba(124, 58, 237, 0.18);
+    color: #c4a5ff;
+}
+
+.bot-support-btn:hover {
+    background: rgba(124, 58, 237, 0.13);
+    border-color: rgba(167, 139, 250, 0.55);
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.15),
+        0 0 15px rgba(124, 58, 237, 0.08);
+}
+
 /* Footer */
 
 .footer {
